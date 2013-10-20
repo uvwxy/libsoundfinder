@@ -1,0 +1,151 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".SoundFinder" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="@drawable/card_background" >
+
+        <TextView
+            android:id="@+id/vBarCorrectRight"
+            android:layout_width="32dp"
+            android:layout_height="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/vBarDistance"
+            android:background="#99cc00" />
+
+        <TextView
+            android:id="@+id/vBarCorrectLeft"
+            android:layout_width="32dp"
+            android:layout_height="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_toLeftOf="@+id/vBarDistance"
+            android:background="#99cc00" />
+
+        <TextView
+            android:id="@+id/vBarErrorLeft"
+            android:layout_width="32dp"
+            android:layout_height="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_toLeftOf="@+id/vBarCorrectLeft"
+            android:background="#ff4444" />
+
+        <TextView
+            android:id="@+id/vBarErrorRight"
+            android:layout_width="32dp"
+            android:layout_height="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/vBarCorrectRight"
+            android:background="#ff4444" />
+
+        <View
+            android:id="@+id/vBar1"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/vBarErrorRight"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp"
+            android:background="#000000" />
+
+        <View
+            android:id="@+id/vBar0"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/vBarErrorLeft"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp"
+            android:background="#000000" />
+
+        <View
+            android:id="@+id/hBar0"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@+id/vBar1"
+            android:background="#000000" />
+
+        <TextView
+            android:id="@+id/vBarDistance"
+            android:layout_width="32dp"
+            android:layout_height="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp"
+            android:background="#33b5e5" />
+
+        <View
+            android:id="@+id/hBar1"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_alignBottom="@+id/vBar1"
+            android:layout_alignParentLeft="true"
+            android:background="#000000" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlBottom"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:background="@drawable/card_background" >
+
+        <ToggleButton
+            android:id="@+id/tbtnBearing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="ToggleButton"
+            android:textOff="Toggle Compass Direction"
+            android:textOn="Toggle GPS Bearing" />
+
+        <TextView
+            android:id="@+id/tvInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tbtnBearing"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="Small Text"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <SeekBar
+            android:id="@+id/sbTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:max="360" />
+
+        <SeekBar
+            android:id="@+id/sbDist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/sbTest"
+            android:layout_alignParentLeft="true"
+            android:max="100" />
+
+    </RelativeLayout>
+
+</LinearLayout>
