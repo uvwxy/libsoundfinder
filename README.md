@@ -7,6 +7,8 @@ To use the library import the SoundFinder class. Then use the helper function to
 
 *Use Headphones!*
 
+Requires [libuvwxy](https://github.com/uvwxy/libuvwxy)
+
 Usage:
 ------
 ```java
