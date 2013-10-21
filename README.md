@@ -5,6 +5,8 @@ Libsoundfinder provides an Android Activity to guide you to a given destination 
 The closer you move towards the target, the faster a repeated beep is heard. Also, the pitch is increased when moving towards the target.
 To use the library import the SoundFinder class. Then use the helper function to launch the Activity via Intent.
 
+*Use Headphones!*
+
 Usage:
 ------
 ```java
