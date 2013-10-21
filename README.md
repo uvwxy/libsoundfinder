@@ -31,3 +31,7 @@ Usage:
   - sound_destination.wav (within zoneRadius)
   - sound_error.wav (if location error is > precision)
   - sound_noise_static.wav ("wrong" direction)
+
+### Screenshot(s):
+
+![Main Screen](https://raw.github.com/uvwxy/libsoundfinder/master/screens/screenshot0.png "Main Screen")
