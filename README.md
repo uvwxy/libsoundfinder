@@ -7,6 +7,8 @@ To use the library import the SoundFinder class. Then use the helper function to
 
 *Use Headphones!*
 
+Requires [libuvwxy](https://github.com/uvwxy/libuvwxy)
+
 Usage:
 ------
 ```java
@@ -31,3 +33,7 @@ Usage:
   - sound_destination.wav (within zoneRadius)
   - sound_error.wav (if location error is > precision)
   - sound_noise_static.wav ("wrong" direction)
+
+### Screenshot(s):
+
+![Main Screen](https://raw.github.com/uvwxy/libsoundfinder/master/screens/screenshot0.png "Main Screen")
