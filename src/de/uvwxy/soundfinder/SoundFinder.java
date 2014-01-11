@@ -26,6 +26,7 @@ import de.uvwxy.sensors.location.GPSWIFIReader;
 import de.uvwxy.sensors.location.LocationReader.LocationResultCallback;
 import de.uvwxy.sensors.location.LocationReader.LocationStatusCallback;
 
+@SuppressWarnings("unused")
 public class SoundFinder extends Activity {
 	private static final String EXTRA_LOCATION_LAT = "EXTRA_LOCATION_LAT";
 	private static final String EXTRA_LOCATION_LON = "EXTRA_LOCATION_LON";
@@ -33,8 +34,6 @@ public class SoundFinder extends Activity {
 	private static final String EXTRA_LOCATION_PRECISION = "EXTRA_LOCATION_PRECISION";
 	private static final String EXTRA_LOCATION_MAX_DISTANCE = "EXTRA_LOCATION_MAX_DISTANCE";
 	private static final String EXTRA_LOCATION_DESTINATION_RADIUS = "EXTRA_LOCATION_DESTINATION_RADIUS";
-
-	private static final String TAG = "SOUNDFINDER";
 
 	private int origHeight = -1;
 	private TextView vBarDistance = null;
@@ -360,12 +359,12 @@ public class SoundFinder extends Activity {
 		diff = diff < -180 ? 360f + diff : diff;
 		diff = diff > 180 ? diff - 360f : diff;
 
-		//TODO: fix diff 0-360
-		float delta = diff;
-		delta /= 180f;
+		//TODO: fix diff 0-360 // REMOVE?
+//		float delta = diff;
+//		delta /= 180f;
 		//		Log.d(TAG, "delta = " + delta);
 		origHeight = vBar0.getHeight();
-		float posDelta = Math.abs(delta);
+//		float posDelta = Math.abs(delta);
 
 		beep.volumeLeft = angleToVolumeLeft(diff);
 		beep.volumeRight = angleToVolumeRight(diff);
